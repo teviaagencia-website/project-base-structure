@@ -1,0 +1,42 @@
+/* Typography */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-16);
+    color: var(--color-text);
+    line-height: 1.6;
+    background-color: var(--color-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-bold);
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+h1 { font-size: var(--font-48); font-size: clamp(32px, 4vw, 48px); }
+h2 { font-size: var(--font-30); font-size: clamp(24px, 2vw, 30px) }
+h3 { font-size: var(--font-24); }
+h4 { font-size: var(--font-20); }
+h5 { font-size: var(--font-18); }
+h6 { font-size: var(--font-16); }
+
+p {
+  margin-bottom: var(--space-16);
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+  font-size: clamp(1rem, 0.9vw + 0.4rem, 1.125rem);
+  text-wrap: balance;
+  color: var(--color-text-light);
+}
+
+.text-light {
+    color: var(--color-text-light);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}

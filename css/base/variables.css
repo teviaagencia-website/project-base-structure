@@ -1,0 +1,108 @@
+/* CSS Variables - Design Tokens */
+:root {
+    /* Colors */
+    --color-primary: #4684B5;
+    --color-text: #070D12;
+    --color-text-light: #505458;
+    --color-bg: #FAFAFA;
+    
+    /* Color RGB values for rgba() */
+    --color-primary-rgb: 0, 123, 255;
+    
+    /* Spacing - Escala de 4 em 4 pixels (1rem = 16px) */
+    --space-4: 0.25rem;    /* 4px */
+    --space-8: 0.5rem;     /* 8px */
+    --space-12: 0.75rem;   /* 12px */
+    --space-16: 1rem;      /* 16px */
+    --space-20: 1.25rem;   /* 20px */
+    --space-24: 1.5rem;    /* 24px */
+    --space-28: 1.75rem;   /* 28px */
+    --space-32: 2rem;      /* 32px */
+    --space-36: 2.25rem;   /* 36px */
+    --space-40: 2.5rem;    /* 40px */
+    --space-44: 2.75rem;   /* 44px */
+    --space-48: 3rem;      /* 48px */
+    --space-52: 3.25rem;   /* 52px */
+    --space-56: 3.5rem;    /* 56px */
+    --space-60: 3.75rem;   /* 60px */
+    --space-64: 4rem;      /* 64px */
+    
+    /* Typography */
+    --font-family: Montserrat;
+    --font-10: 0.625rem;   /* 10px */
+    --font-12: 0.75rem;    /* 12px */
+    --font-14: 0.875rem;   /* 14px */
+    --font-16: 1rem;       /* 16px - base */
+    --font-18: 1.125rem;   /* 18px */
+    --font-20: 1.25rem;    /* 20px */
+    --font-24: 1.5rem;     /* 24px */
+    --font-28: 1.75rem;    /* 28px */
+    --font-30: 1.875rem;   /* 30px */
+    --font-32: 2rem;       /* 32px */
+    --font-36: 2.25rem;    /* 36px */
+    --font-40: 2.5rem;     /* 40px */
+    --font-48: 3rem;       /* 48px */
+    
+    /* Font Weight */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    
+    /* Border Radius */
+    --radius-4: 0.25rem;   /* 4px */
+    --radius-8: 0.5rem;    /* 8px */
+    --radius-12: 0.75rem;  /* 12px */
+    --radius-16: 1rem;     /* 16px */
+    --radius-20: 1.25rem;  /* 20px */
+    --radius-24: 1.5rem;   /* 24px */
+    --radius-full: 9999px; /* Círculo completo */
+    
+    /* Shadows */
+    --shadow-sm: 0 4px 24px rgba(0, 0, 0, 0.06);
+    
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 250ms ease-in-out;
+    --transition-slow: 350ms ease-in-out;
+
+    /* Container - Larguras Úteis por Dispositivo */
+    --container-mobile-portrait: 100%;      /* 0-767px: sem padding fixo, usa % */
+    --container-mobile-landscape: 100%;     /* 768-890px */
+    --container-tablet-portrait: 100%;      /* 891-1024px */
+    --container-tablet-small: 100%;         /* 1025-1200px */
+    --container-notebook: 1140px;           /* 1201-1366px */
+    --container-desktop: 1280px;            /* 1367-2399px */
+    --container-web: 1440px;                /* 2400px+ */
+
+    /* Padding Lateral para Dispositivos Móveis */
+    --container-padding-mobile: 20px;
+    --container-padding-tablet: 40px;
+
+    /* Breakpoints */
+    --bp-mobile-portrait: 767px;
+    --bp-mobile-landscape: 890px;
+    --bp-tablet-portrait: 1024px;
+    --bp-tablet-small: 1200px;
+    --bp-notebook: 1366px;
+    --bp-desktop: 2399px;
+
+    /* Compatibilidade: variáveis genéricas apontam para o tamanho desktop */
+    --container-max-width: var(--container-desktop);
+    --container-padding: var(--container-padding-mobile);
+}
+
+/* Media query para ajustar padding genérico em tablets e acima */
+@media (min-width: 891px) {
+    :root {
+        --container-padding: var(--container-padding-tablet);
+    }
+}
+
+/* Media query para remover padding em notebooks e acima (quando usa largura fixa) */
+@media (min-width: 1201px) {
+    :root {
+        --container-padding: 0;
+    }
+}
